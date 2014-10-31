@@ -22,6 +22,14 @@ Template.momentum.rendered = function() {
     moveElement: Function,
     removeElement: Function
   });
+
+  if (this.data.cssClass) {
+    this.lastNode.className = this.data.cssClass;
+  }
+
+  if (this.data.cssId) {
+    this.lastNode.id = this.data.cssId;
+  }
   
   // Pass in the _identity function for the done callback as by default
   // momentum doesn't care about when transitions are done.
